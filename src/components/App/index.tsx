@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AddFileContainer, StyledMiddleText } from "./App.styled";
 import FileUpload from "../FileUpload";
 import Form from "../Form";
+import InstallPWA from "../InstallPWA";
 
 const App = () => {
   const [content, setContent] = useState(null);
@@ -12,6 +13,7 @@ const App = () => {
 
   return (
     <AddFileContainer>
+      <InstallPWA />
       {!removeHeader ? (
         <>
           <FileUpload handleReceivedContent={handleReceivedContent} />

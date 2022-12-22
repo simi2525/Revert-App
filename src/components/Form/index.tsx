@@ -1,4 +1,4 @@
-import { CardActions, CardContent } from "@mui/material";
+import { Button, CardActions, CardContent } from "@mui/material";
 import { useEffect, useState } from "react";
 import ViewForm from "../ViewForm";
 import FormConfig from "./config";
@@ -48,21 +48,24 @@ const Form = (props: any) => {
       sx={
         viewForm
           ? {
-              minWidth: 789,
-              maxHeight: 520,
-              overflow: "auto",
-              padding: "24px",
-            }
+            minWidth: 789,
+            maxHeight: 520,
+            overflow: "auto",
+            padding: "24px",
+          }
           : {
-              maxWidth: 789,
-              maxHeight: 520,
-              overflow: "auto",
-            }
+            maxWidth: 789,
+            maxHeight: 520,
+            overflow: "auto",
+          }
       }
       id="view-form"
     >
       {viewForm ? (
-        <ViewForm data={formValues} />
+        <>
+          <Button onClick={() => { setViewForm(false); hideHeader(false) }}>Back</Button>
+          <ViewForm data={formValues} />
+        </>
       ) : (
         <StyledForm onSubmit={handleSubmit}>
           <CardContent sx={{ padding: "16px 0" }}>
@@ -85,10 +88,10 @@ const Form = (props: any) => {
                           onChange={handleInputChange}
                           size="small"
                           margin="normal"
-                          // error={name !== "sex" && formValues[name] < 0}
-                          // {...(name !== "sex" && {
-                          //   InputProps: { inputProps: { min: 0 } },
-                          // })}
+                        // error={name !== "sex" && formValues[name] < 0}
+                        // {...(name !== "sex" && {
+                        //   InputProps: { inputProps: { min: 0 } },
+                        // })}
                         />
                       );
                     })}

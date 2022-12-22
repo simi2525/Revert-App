@@ -1,4 +1,4 @@
-import { CircularProgress } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import { useEffect, useState } from "react";
 import dataMap from "./dataMap";
 import { StatusContainer, StatusNumber } from "./ViewForm.styled";
@@ -31,6 +31,7 @@ const ViewForm = (props: any) => {
       setStatus("High");
   }, [randomScore]);
 
+  /* eslint-disable */
   return (
     <div>
       <div style={{ position: "relative" }}>
