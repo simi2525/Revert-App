@@ -37,7 +37,7 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
-    "heroku-postbuild": "NODE_ENV=production react-scripts --openssl-legacy-provider build",
+    "heroku-postbuild": "set NODE_ENV='production'",
     "test": "react-scripts --openssl-legacy-provider test",
     "eject": "react-scripts eject"
   },
