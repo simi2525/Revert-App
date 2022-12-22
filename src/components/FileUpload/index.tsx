@@ -3,9 +3,10 @@ import { Button } from "@mui/material";
 import { FileUploadContainer } from "./FileUpload.styled";
 import UploadFileIcon from "@mui/icons-material/UploadFile";
 
+/* eslint-disable */
 const FileUpload = (props: any) => {
-  const [selectedFile, setSelectedFile] = useState<any>();
-  const [isFilePicked, setIsFilePicked] = useState(false);
+  const [_selectedFile, setSelectedFile] = useState<any>();
+  const [_isFilePicked, setIsFilePicked] = useState(false);
   const { handleReceivedContent } = props;
   let fileReader: any;
 
